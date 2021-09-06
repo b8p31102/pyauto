@@ -5,8 +5,8 @@ from kivy.resources import resource_add_path
 
 #C:\windows\Fonts
 
-resource_add_path('c:/Windows/Fonts')  # 追加分
-LabelBase.register(DEFAULT_FONT, 'msgothic.ttc')  # 追加分
+resource_add_path('C:\Windows\Fonts')  # 追加分
+LabelBase.register(DEFAULT_FONT, 'HGRMB.ttc')  # 追加分
 
 class TestApp(App):
     pass
