@@ -7,9 +7,9 @@ from kivy.resources import resource_add_path
 from kivy.config import Config #縦横の高さ指定
 Config.set('graphics', 'width','640')
 Config.set('graphics','height','480')
-from kivy.uix.wodget import widget
+from kivy.uix.widget import Widget
 from kivy.properties import StringProperty
-from random import randint
+import random
 #C:\windows\Fonts
 
 resource_add_path("font")  # 追加分
@@ -26,14 +26,15 @@ class ImageWidget(Widget): #全体のwidget,image表示
 
     def buttonStarted(self): #初めに戻るボタンイベント
         self.source='image/00.jpg'
-
+    
     def buttonRandom(self):
-        self.source=f'00000{randint(1,9)}.jpg'
+        self.source='image/0' + str(random.randint(1, 9)) +'.jpg'
+    
 
 class HigurashiApp(App):
     def __init__(self,**kwargs):
-        super(CatApp,self).__init__(**kwargs)
-        self.title =　'ひぐらしのなく頃にの画像'
+        super(HigurashiApp,self).__init__(**kwargs)
+        self.title = 'ひぐらしのなく頃にの画像'
 
 if __name__ =='__main__': #↑classと同じ名前に
     HigurashiApp().run()
