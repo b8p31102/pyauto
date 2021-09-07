@@ -23,9 +23,10 @@ class ImageWidget(Widget): #全体のwidget,image表示
     def __init__(self, **kwargs): #これは定型文
         super(ImageWidget,self).__init__(**kwargs)
         pass
-
+ 
     def buttonStarted(self): #初めに戻るボタンイベント
-        self.source='image/00.jpg'
+        import auto
+        auto.auto_main()
     
     def buttonRandom(self):
         self.source='image/0' + str(random.randint(1, 9)) +'.jpg'
