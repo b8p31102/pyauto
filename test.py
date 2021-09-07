@@ -1,3 +1,5 @@
+import io,sys
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from kivy.app import App
 
 from kivy.core.text import LabelBase, DEFAULT_FONT
